@@ -14,19 +14,21 @@
 <script>
   document.documentElement.classList.add("js");
 
-  // Função para obter os nomes dos convidados a partir do caminho da URL
-  function getGuestNamesFromPath() {
-    const path = window.location.pathname;
-    const parts = path.split('/').filter(Boolean).pop().split('-');
-    return parts;
+  // Função para obter os parâmetros da URL
+  function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    const results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
   }
 
-  // Atualiza o texto do convite com os nomes dos convidados
+  // Atualiza o texto do convite com os parâmetros da URL
   function updateInvitationText() {
-    const [guest1, guest2] = getGuestNamesFromPath();
+    const a = getUrlParameter('a');
+    const b = getUrlParameter('b');
 
-    if (guest1 && guest2) {
-      document.querySelector('.convite').textContent = `Convite para ${guest1} e ${guest2}`;
+    if (a && b) {
+      document.querySelector('.convite').textContent = `Convite para ${a} e ${b}`;
     }
   }
 
