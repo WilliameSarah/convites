@@ -13,33 +13,15 @@
 
 <script>
   document.documentElement.classList.add("js");
-
-  // Função para obter os parâmetros da URL
-  function getUrlParameter(name) {
-    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    const results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-  }
-
-  // Atualiza o texto do convite com os parâmetros da URL
-  function updateInvitationText() {
-    const a = getUrlParameter('a');
-    const b = getUrlParameter('b');
-
-    if (a && b) {
-      document.querySelector('.convite').textContent = `Convite para ${a} e ${b}`;
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', updateInvitationText);
 </script>
 
 <body>
   <div class="home">
     <p class="font-1-m casamento" data-anime="200">CASAMENTO DE</p>
     <p class="font-2 nomes" data-anime="400">Ana Vitória e Vinícius</p>
-    <p class="font-1-m casamento convite" data-anime="200">Convite para Nicolas e Brenda</p>
+    <p class="font-1-m casamento" data-anime="200"></span> <span class="detalhe-e"></span> <span class="nome2"></span></p>
+
+
     <a href="./video/gabrielevaleria.mp4" class="link_envelope" data-anime="600"> <img src="img/envelope.png" class="envelope"> </a>
   </div>
   <p class="aviso font-1-m" data-anime="500">Necessário confirmação de<br> presença até o dia 10/08!</p>
@@ -54,12 +36,12 @@
           <span class="close2">&times;</span>
           <h2 class="font-1-m">Vestimenta</h2>
 
-          <p class="pix">
-            Para garantir a harmonia visual do nosso evento, <br>pedimos que evitem usar as seguintes cores:<br>
-            Marsala<br>
-            Verde esmeralda<br>
-            Branco
-          </p>
+        <p class="pix">
+          Para garantir a harmonia visual do nosso evento, <br>pedimos que evitem usar as seguintes cores:<br>
+Marsala<br>
+Verde esmeralda<br>
+Branco
+        </p>
         </div>
       </div>
     </div>
@@ -80,10 +62,10 @@
           <span class="close">&times;</span>
           <h2 class="font-1-m">CHAVES PIX:</h2>
           <p class="pix">Pix Ana: 19982090987
-          </p>
-          <p class="pix">
-            Pix Vinícius: 11949881145
-          </p>
+            </p>
+            <p class="pix">
+              Pix Vinícius: 11949881145
+            </p>
           <p class="pix copy-button"><!-- Valéria Lacerda de Carvalho:<span> 000000000 --></span></p>
           <p class="pix copy-button2"><!-- Gabriel Oliveira Araujo:<span> 000000000 --></span></p>
           <p id="copy-message" class="hidden font-1-p"><!-- Chave Pix copiada(email)! --></p>
@@ -92,8 +74,12 @@
     </div>
   </div>
 
-  <script src="simple-anime.js"></script>
-  <script src="parametros.js"></script>
+
+
+  <script src="simple-anime.js">
+  </script>
+  <script src="parametros.js">
+  </script>
 </body>
 
 </html>
