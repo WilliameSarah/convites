@@ -1,0 +1,38 @@
+
+/* footer::after{
+  content: "";
+  display: block;
+  background-repeat: no-repeat;
+  bottom: 0;
+  height: 200px;
+  left: 0;
+  right: 0;
+  background-color: red;
+  background-image: url("../../img/footer.png");
+  position: absolute;
+  
+}
+ */
+
+
+
+ 
+footer{
+  background-image: url("../../img/footer.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+}
+
+
+@media(min-width:600px){
+  footer{
+    background-size: auto;
+  }
+}

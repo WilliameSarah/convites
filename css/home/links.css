@@ -1,0 +1,78 @@
+
+.links img{
+  align-self: flex-end;
+ 
+}
+
+
+.links{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  padding-top:0px;
+  position: relative;
+  padding-top: 10px;
+  
+}
+
+
+
+
+.links p, .copy-button button{
+  text-align: center !important;
+  color: #4C4C4B;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  
+}
+
+button{border: none;
+  background: transparent;
+}
+
+@media(min-width:700px){
+  .nomes{
+    align-items: center;
+  }
+  .convidam, .local{
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .convidam p,.local p{
+    text-align: center;
+  }
+
+  .links{
+    justify-content: center;
+  }
+
+
+ 
+}
+
+.copy-button{
+  background-color: transparent;
+  border: none;
+
+  
+  
+}
+
+#copy-message{
+color: #4C4C4B !important;
+font-size: 1.2rem;
+text-align: center;
+font-weight: bold;
+
+}
+
+.hidden {
+  display: none;
+}

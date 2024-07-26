@@ -1,0 +1,39 @@
+.font-1 {
+  font: 2.5rem 'Halant', cursive;
+ 
+}
+.font-1-p {
+   font:0.8rem 'Halant', cursive;
+  
+}
+.font-1-m {
+   font:1em "Quicksand", sans-serif;
+   letter-spacing: 5px;
+ 
+}
+
+
+.font-1-g {
+  font:1.6em "Quicksand", sans-serif;
+  letter-spacing: 5px;
+
+}
+
+.font-2 {
+   font: 2.8em "Allura", serif !important;
+  line-height: 1 !important;
+
+}
+
+.font-2-m {
+  font: 2em "Allura", serif !important;
+ line-height: 1 !important;
+
+}
+
+
+
+@font-face {
+  font-family: HighSpirited;
+  src: url("HighSpirited.ttf");
+}

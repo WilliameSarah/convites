@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Halant:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <meta property="og:image" content="https://raw.githubusercontent.com/GabrieleValeria/convite/main/img/logo.jpg" />
+  <title>Ana Vitória e Vinícius</title>
+</head>
+
+<script>
+  document.documentElement.classList.add("js");
+
+  // Função para obter os nomes dos convidados a partir do caminho da URL
+  function getGuestNamesFromPath() {
+    const path = window.location.pathname;
+    const parts = path.split('/').filter(Boolean).pop().split('-');
+    return parts;
+  }
+
+  // Atualiza o texto do convite com os nomes dos convidados
+  function updateInvitationText() {
+    const [guest1, guest2] = getGuestNamesFromPath();
+
+    if (guest1 && guest2) {
+      document.querySelector('.convite').textContent = `Convite para ${guest1} e ${guest2}`;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', updateInvitationText);
+</script>
+
+<body>
+  <div class="home">
+    <p class="font-1-m casamento" data-anime="200">CASAMENTO DE</p>
+    <p class="font-2 nomes" data-anime="400">Ana Vitória e Vinícius</p>
+    <p class="font-1-m casamento convite" data-anime="200">Convite para Nicolas e Brenda</p>
+    <a href="./video/gabrielevaleria.mp4" class="link_envelope" data-anime="600"> <img src="img/envelope.png" class="envelope"> </a>
+  </div>
+  <p class="aviso font-1-m" data-anime="500">Necessário confirmação de<br> presença até o dia 10/08!</p>
+  <div class="links font-1-p container">
+    <div class="lista flex" data-anime="1400">
+      <button id="openModalBtn2" class="font-1-p">
+        <img src="img/gravata.png">
+        <p class="copy-button font-1-p">dicas <br>vestimenta</p>
+      </button>
+      <div id="myModal2" class="modal2">
+        <div class="modal-content2">
+          <span class="close2">&times;</span>
+          <h2 class="font-1-m">Vestimenta</h2>
+
+          <p class="pix">
+            Para garantir a harmonia visual do nosso evento, <br>pedimos que evitem usar as seguintes cores:<br>
+            Marsala<br>
+            Verde esmeralda<br>
+            Branco
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="confirmar flex" data-anime="1200">
+      <a href="https://api.whatsapp.com/send?phone=5519989656694&text=Ol%C3%A1,%20estou%20confirmando%20minha%20presen%C3%A7a.%0A%F0%9D%92%9C%F0%9D%93%83%F0%9D%92%B6%20e%20%F0%9D%92%B1%F0%9D%92%BE%F0%9D%93%83%F0%9D%92%BE%F0%9D%92%B8%F0%9D%93%8A%F0%9D%93%88%20%F0%9F%A4%8D" target="_blank">
+        <img src="img/whats.png">
+        <p>confimar <br>presença</p>
+      </a>
+    </div>
+    <div class="lista flex" data-anime="1400">
+      <button id="openModalBtn" class="font-1-p">
+        <img src="img/pix.png">
+        <p class="copy-button font-1-p">pix <br>presente</p>
+      </button>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 class="font-1-m">CHAVES PIX:</h2>
+          <p class="pix">Pix Ana: 19982090987
+          </p>
+          <p class="pix">
+            Pix Vinícius: 11949881145
+          </p>
+          <p class="pix copy-button"><!-- Valéria Lacerda de Carvalho:<span> 000000000 --></span></p>
+          <p class="pix copy-button2"><!-- Gabriel Oliveira Araujo:<span> 000000000 --></span></p>
+          <p id="copy-message" class="hidden font-1-p"><!-- Chave Pix copiada(email)! --></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="simple-anime.js"></script>
+  <script src="parametros.js"></script>
+</body>
+
+</html>
