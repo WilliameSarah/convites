@@ -20,10 +20,10 @@ const nomes2 = document.querySelector('.nome2');
 
 
 if (parametrosURL.nome1) {
-  nomes1.innerHTML = "Convite para " + parametrosURL.nome1;
+  nomes1.innerHTML = parametrosURL.nome1;
 }
 if (parametrosURL.nome2) {
-  nomes2.innerHTML = "e " + parametrosURL.nome2;
+  nomes2.innerHTML = parametrosURL.nome2;
 }
 
 if (parametrosURL.data) {
