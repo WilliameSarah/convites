@@ -10,7 +10,7 @@ function obterParametrosDaURL() {
   const nome2 = parametros.get('nome2');
 
 
-  return { nome1, nome2, data };
+  return { nome1, nome2 };
 }
 
 // Exemplo de uso
@@ -20,14 +20,11 @@ const nomes2 = document.querySelector('.nome2');
 
 
 if (parametrosURL.nome1) {
-  nomes1.innerHTML = parametrosURL.nome1;
+  nomes1.innerHTML = "convite para " + parametrosURL.nome1;
 }
 if (parametrosURL.nome2) {
-  nomes2.innerHTML = parametrosURL.nome2;
+  nomes2.innerHTML = "e " + parametrosURL.nome2;
 }
 
-if (parametrosURL.data) {
-  datas.innerHTML = parametrosURL.data;
-}
 
-console.log(datas);
+console.log(nomes1);
